@@ -74,3 +74,12 @@ In your status dashboard or reports view, load an image with the URL:
 <img src="http://app.gtraxapp.com/eventimager?series=rpc.success:rpc.failure" width="600" height="200">
 ```
 
+(Replace app.gtraxapp.com with your application's domain name)
+
+You should now see a 2 hour history of success events vs. failure events! The encoding
+for the image format is simple -- its simply a colon separated list of event
+namespaces.
+
+Remember, the data is designed to be fast, rather then durable. If Google decides
+to flush memcache you'll lose data. In practice though, you shouldn't see this 
+happen very often!
