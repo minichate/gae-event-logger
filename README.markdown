@@ -55,7 +55,7 @@ Usage
 To actually use the logger, you'll just need to do something like:
 
 ```java
-log.log(EventLevel.EVENT, "rpc.request.success");
+log.log(EventLevel.EVENT, "rpc.success");
 ```
 
 Notice that we're using the EVENT log level -- EventLogging will ignore log
@@ -64,12 +64,13 @@ successful RPC request -- you'd probably also want to catch failures for
 comparison:
 
 ```java
-log.log(EventLevel.EVENT, "rpc.request.failure");
+log.log(EventLevel.EVENT, "rpc.failure");
 ```
 
 Now that we have logged the successes and failures, we want to see the data!
 In your status dashboard or reports view, load an image with the URL:
 
 ```html
-<img src="http://app.gtraxapp.com/eventimager?series=rpc.request.failed:rpc.request.success" width="600" height="200">
+<img src="http://app.gtraxapp.com/eventimager?series=rpc.success:rpc.failure" width="600" height="200">
 ```
+
