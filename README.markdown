@@ -66,3 +66,8 @@ comparison:
 ```java
 log.log(EventLevel.EVENT, "rpc.request.failure");
 ```
+
+Now that we have logged the successes and failures, we want to see the data!
+In your status dashboard or reports view, load an image with the URL:
+
+<img src="http://app.gtraxapp.com/eventimager?series=rpc.request.failed:rpc.request.success" width="600" height="200">
