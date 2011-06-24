@@ -1,0 +1,4 @@
+war/WEB-INF/lib/*
+war/WEB-INF/classes/
+war/index.html
+.settings/
